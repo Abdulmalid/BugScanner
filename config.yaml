@@ -1,0 +1,34 @@
+scanners:
+  nuclei:
+    path: "/home/ubuntu/.pdtm/go/bin/nuclei"
+    templates_dir: "~/nuclei-templates"
+    severity: "critical,high,medium"
+  jaeles:
+    path: "/home/ubuntu/go/bin/jaeles"
+    signatures_dir: "~/.jaeles/signatures"
+  subfinder:
+    path: "/home/ubuntu/.pdtm/go/bin/subfinder"
+  httpx:
+    path: "/home/ubuntu/.pdtm/go/bin/httpx"
+  katana:
+    path: "/home/ubuntu/.pdtm/go/bin/katana"
+  amass:
+    path: "/home/ubuntu/go/bin/amass"
+  gau:
+    path: "/home/ubuntu/go/bin/gau"
+  waybackurls:
+    path: "/home/ubuntu/go/bin/waybackurls"
+  ffuf:
+    path: "/home/ubuntu/go/bin/ffuf"
+  s3scanner:
+    path: "/usr/local/bin/s3scanner"
+  cloudenum:
+    path: "/home/ubuntu/tools/cloud_enum/cloud_enum.py"
+
+output:
+  directory: "./results"
+  format: "json"
+
+cloud_options:
+  keywords: ["mycompany", "dev", "prod", "backup"]
+  regions: ["us-east-1", "us-west-2", "eu-west-1"]
